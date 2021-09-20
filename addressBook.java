@@ -115,6 +115,8 @@ import java.util.Scanner;
             case 2:
                 edit();
                 break;
+            case 3 : delete();
+                break;
         }
     }
 }
