@@ -27,15 +27,18 @@ import java.util.Scanner;
         long phone = sc.nextLong();
         System.out.println("Email:");
         String email = sc.next();
-
-        System.out.println("fname:" + fname);
-        System.out.println("lname:" + lname);
-        System.out.println("address:" + address);
-        System.out.println("city:" + city);
-        System.out.println("State:" + state);
-        System.out.println("zip:" + zip);
-        System.out.println("phone:" + phone);
-        System.out.println("email:" + email);
+        details personinfo= new details(fname,lname,address,city,state,zip,phone,email);
+        return personinfo;
+    }
+        public static void display(details personinfo){
+        System.out.println("fname:" + personinfo.getfname());
+        System.out.println("lname:" + personinfo.getLname());
+        System.out.println("address:" + personinfo.getAddress());
+        System.out.println("city:" + personinfo.getCity());
+        System.out.println("State:" + personinfo.getState());
+        System.out.println("zip:" + personinfo.getZip());
+        System.out.println("phone:" + personinfo.getPhone());
+        System.out.println("email:" + personinfo.getEmail());
 
     }
 
@@ -116,6 +119,8 @@ import java.util.Scanner;
                 edit();
                 break;
             case 3 : delete();
+                break;
+            case 4: display();
                 break;
         }
     }
